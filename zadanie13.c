@@ -22,6 +22,12 @@ int uklad(double** a, double* b) {
 int main() {
 
     int i, j;
+
+    // Malloc zamiast operatora new, w orginalnej wersji:
+    // double** a = new double*[2];
+    // a[0] = new double[2];
+    // a[1] = new double[2];
+
     double** a = (double**)malloc(2 *sizeof(double*));
     a[0] = (double*)malloc(2 * sizeof(double));
     a[1] = (double*)malloc(2 * sizeof(double));
